@@ -2,11 +2,11 @@
 
 namespace RazorPagesTodoList.Repositories
 {
-    public interface ITaskRepository
+    public interface IRepository<T> where T : Entity
     {
-        List<UserTask> GetAll();
-        UserTask? GetById(int id);
-        void Create(UserTask userTask);
+        List<T> GetAll();
+        T? GetById(int id);
+        void Create(T entity);
         void Delete(int id);
         void SaveChanges();
     }

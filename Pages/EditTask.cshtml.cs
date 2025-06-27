@@ -10,9 +10,9 @@ namespace RazorPagesTodoList.Pages
     public class EditTaskModel : PageModel
     {
         private readonly ITaskService _taskService;
-        private readonly ITaskRepository _taskRepository;
+        private readonly IRepository<UserTask> _taskRepository;
 
-        public EditTaskModel(ITaskService taskService, ITaskRepository taskRepository)
+        public EditTaskModel(ITaskService taskService, IRepository<UserTask> taskRepository)
         {
             _taskService = taskService;
             _taskRepository = taskRepository;
